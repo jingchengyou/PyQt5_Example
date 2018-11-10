@@ -24,12 +24,10 @@ def generate_folder():
         return temp_path
 
 
-filename = generate_folder() + '\\' + datetime.now().strftime("%Y%m%d")
-
-
 class Logger:
     def __init__(self, keyword):
         super().__init__()
+        self.filename = generate_folder() + '\\' + datetime.now().strftime("%Y%m%d")
         if keyword:
             self.keyword = keyword
         else:
@@ -43,7 +41,7 @@ class Logger:
                                       datefmt="%Y-%m-%d %H:%M:%S")
 
         # 将日志写入到文件中
-        file_handler = logging.FileHandler(filename=filename)
+        file_handler = logging.FileHandler(filename=self.filename)
         file_handler.setLevel(level=logging.WARNING)
         file_handler.setFormatter(formatter)
         logger.addHandler(file_handler)
