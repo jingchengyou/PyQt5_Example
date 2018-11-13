@@ -1,8 +1,8 @@
 """
 查找新、旧数据库中对应的任务id脚本
 """
-from db import Mysql
-from db import OLD_CONFIG, NEW_CONFIG
+from db.mysql import Mysql
+from db.config import OLD_CONFIG, NEW_CONFIG
 
 
 old_sql = ("SELECT tag_name, sort, taskid, xpath, value, action, precode "

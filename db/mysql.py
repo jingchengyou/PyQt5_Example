@@ -7,7 +7,7 @@ python >= 2.7 or python >=3.4
 MySQL >= 5.5
 """
 import requests
-from control import Logger
+from control.logic.log import Logger
 import pymysql
 from pymysql.err import Error, OperationalError
 from contextlib import contextmanager
@@ -86,7 +86,7 @@ class Mysql:
             return self._execute(sql=sql).fetchall()
 
     @confirm_network
-    def insert(self, sql: str, data: tuple) -> bool:
+    def insert(self, sql: str, data: tuple =tuple()) -> bool:
         if data:
             if self._execute_many(sql=sql, data=data):
                 return True
@@ -95,7 +95,7 @@ class Mysql:
                 return True
 
     @confirm_network
-    def update(self, sql: str, data: tuple) -> bool:
+    def update(self, sql: str, data: tuple =tuple()) -> bool:
         if data:
             if self._execute_many(sql=sql, data=data):
                 return True
@@ -104,7 +104,7 @@ class Mysql:
                 return True
 
     @confirm_network
-    def delete(self, sql: str, data: tuple) -> bool:
+    def delete(self, sql: str, data: tuple =tuple()) -> bool:
         if data:
             if self._execute_many(sql=sql, data=data):
                 return True
