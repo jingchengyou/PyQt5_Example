@@ -16,7 +16,7 @@
 import os
 from control.logic.delete_new_task import DeleteTask
 from control.logic.new_task_import import TaskImport
-from control.logic.backup_new_task import Backup
+from control.logic.backup_new_task import init_folder
 
 from control.logic.log import Logger
 logger = Logger(__name__).get_logger()
@@ -25,8 +25,7 @@ logger = Logger(__name__).get_logger()
 class Recovery:
     def __init__(self):
         super().__init__()
-        back = Backup(task=-1)
-        self.path = back.path
+        self.path = init_folder()
 
     @staticmethod
     def _confirm_format(task: int, data: str):
@@ -42,7 +41,7 @@ class Recovery:
             return True
 
     def recovery_task(self, task: int):
-        file = self.path + str(task)
+        file = self.path + '\\' + str(task)
         if os.path.exists(file):
             with open(file, mode='r', encoding='utf-8') as f:
                 file_data = f.read()
