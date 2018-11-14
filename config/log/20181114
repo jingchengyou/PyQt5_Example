@@ -1,0 +1,14 @@
+2018-11-14 09:55:32 - CRITICAL - <db.mysql>:string index out of range
+2018-11-14 09:55:32 - CRITICAL - <__main__>:string index out of range
+2018-11-14 09:56:38 - CRITICAL - <db.mysql>:string index out of range
+2018-11-14 09:56:38 - CRITICAL - <__main__>:string index out of range
+2018-11-14 09:59:27 - CRITICAL - <db.mysql>:'str' object has no attribute 'read'
+2018-11-14 09:59:27 - CRITICAL - <__main__>:'str' object has no attribute 'read'
+2018-11-14 09:59:51 - CRITICAL - <db.mysql>:dump() missing 1 required positional argument: 'fp'
+2018-11-14 09:59:51 - CRITICAL - <__main__>:dump() missing 1 required positional argument: 'fp'
+2018-11-14 10:01:54 - CRITICAL - <db.mysql>:'str' object has no attribute 'read'
+2018-11-14 10:01:54 - CRITICAL - <__main__>:'str' object has no attribute 'read'
+2018-11-14 10:01:59 - CRITICAL - <db.mysql>:Expecting value: line 1 column 1 (char 0)
+2018-11-14 10:01:59 - CRITICAL - <__main__>:Expecting value: line 1 column 1 (char 0)
+2018-11-14 10:04:10 - CRITICAL - <db.mysql>:string index out of range
+2018-11-14 10:04:10 - CRITICAL - <__main__>:string index out of range

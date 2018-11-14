@@ -16,7 +16,7 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout" stretch="1,1,11,1,1,1,1,0,1,5,0">
     <item>
-     <widget class="QLineEdit" name="search">
+     <widget class="QLineEdit" name="searchLine">
       <property name="minimumSize">
        <size>
         <width>300</width>
@@ -124,7 +124,7 @@
      </spacer>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="deleteButton">
       <property name="text">
        <string>删除新程序</string>
       </property>

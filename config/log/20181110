@@ -1,3 +1,0 @@
-2018-11-10 17:33:04 - CRITICAL - <db.mysql>:<_execute_many.Error>-(1146, "Table 'autoreg.gms_tags' doesn't exist")
-2018-11-10 17:34:10 - CRITICAL - <db.mysql>:<_execute_many.Error>-(1146, "Table 'autoreg.gms_tags' doesn't exist")
-2018-11-10 17:35:18 - CRITICAL - <db.mysql>:<_execute_many.Error>-(1146, "Table 'autoreg.gms_tags' doesn't exist")
