@@ -96,7 +96,7 @@
     <item>
      <widget class="QPushButton" name="coverButton">
       <property name="text">
-       <string>同名覆盖导入</string>
+       <string>覆盖导入</string>
       </property>
      </widget>
     </item>

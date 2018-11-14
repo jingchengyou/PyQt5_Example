@@ -18,6 +18,10 @@ class TaskImport:
                f"VALUES (%s, %s, %s, %s, %s, %s, %s)")
         return self.mysql.insert(sql=sql, data=data)
 
+    def insert_back(self, data: tuple):
+        sql = "INSERT INTO script VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+        return self.mysql.insert(sql=sql, data=data)
+
 
 if __name__ == "__main__":
     from control.logic.find_task_id import FindTask

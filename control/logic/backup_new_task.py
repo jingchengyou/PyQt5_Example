@@ -4,12 +4,9 @@ config/backup中存放
 若没有，则在本地新建文件夹
 """
 import os
-from datetime import datetime
 
 from db.mysql import Mysql
 from db.config import NEW_CONFIG
-
-folder = datetime.now().strftime('%Y%m%d')
 
 
 def init_folder():
@@ -38,7 +35,7 @@ class Backup:
         self.mysql = Mysql(NEW_CONFIG)
         self.task_name = str(task)
         self.backup_data = data
-        self.path = init_folder() + '\\' + folder + '\\'
+        self.path = init_folder() + '\\'
 
         self.file = self.path + self.task_name
 
