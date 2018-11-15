@@ -14,7 +14,7 @@ def init_folder():
     if os.path.exists(path):
         return path
     else:
-        temp_path = os.getcwd() + '\\old_to_new\\config\\backup'
+        temp_path = os.getcwd() + '\\old_to_new\\user_file\\backup'
         if not os.path.exists(temp_path):
             os.makedirs(temp_path)
         return temp_path

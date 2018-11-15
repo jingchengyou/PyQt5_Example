@@ -6,6 +6,7 @@ from control.logic.find_task_id import FindTask
 from control.logic.log import Logger
 from control.logic.new_task_import import TaskImport
 from control.logic.recovery_new_task import Recovery
+from control.logic.backup_new_task import init_folder
 
 
 

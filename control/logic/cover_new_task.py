@@ -24,16 +24,10 @@ class CoverTask:
         if target_task:
             delete_result = delete_task.delete_task(task_id=target_task)  # 异名导入
             if source and delete_result:
-                temp = list()
-                for per in source:
-                    per_list = list(per)
-                    per_list[2] = target_task
-                    temp.append(tuple(per_list))
-                trans_source = tuple(temp)
                 task_import = TaskImport()
-                return task_import.insert_task(trans_source)
+                return task_import.insert_different_task(target_task, source)
             else:
-                False
+                return False
         else:
             delete_result = delete_task.delete_task(task_id=source_task)  # 同名导入
             if source and delete_result:

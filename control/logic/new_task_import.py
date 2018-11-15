@@ -18,6 +18,15 @@ class TaskImport:
                f"VALUES (%s, %s, %s, %s, %s, %s, %s)")
         return self.mysql.insert(sql=sql, data=data)
 
+    def insert_different_task(self, task: int, data: tuple):
+        temp = list()
+        for per in data:
+            per_list = list(per)
+            per_list[2] = task
+            temp.append(tuple(per_list))
+        trans_source = tuple(temp)
+        return self.insert_task(trans_source)
+
     def insert_back(self, data: tuple):
         sql = "INSERT INTO script VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
         return self.mysql.insert(sql=sql, data=data)

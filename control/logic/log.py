@@ -18,7 +18,7 @@ def generate_folder():
     if os.path.exists(path_folder):
         return path_folder
     else:
-        temp_path = os.getcwd() + '\old_to_new\config\log'
+        temp_path = os.getcwd() + '\old_to_new\\user_file\log'
         if not os.path.exists(temp_path):
             os.makedirs(temp_path)
         return temp_path
